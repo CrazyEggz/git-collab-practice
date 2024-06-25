@@ -10,11 +10,13 @@ function getCurrentDateTime() {
 }
 
 // Display the current date and time
-function displayCurrentDateTime() {
-    let currentDateTime = getCurrentDateTime();
-    let dateTime = currentDateTime.toLocaleString();
-    console.log(dateTime);
-}
+
+function displayCurrentDateTime() { 
+    const currentDateTime = getCurrentDateTime();
+    const currentDateTimeString = currentDateTime.toLocaleString();
+    const currentDateTimeElement = document.getElementById("current-date-time");
+    currentDateTimeElement.innerHTML = currentDateTimeString;
+} // ive change this to display the current date and time
 
 // Display the current date and time every second
 function displayCurrentDateTimeEverySecond() {
