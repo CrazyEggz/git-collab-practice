@@ -14,4 +14,14 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 99;
+}
+
+#targetBox {
+    background-color: green; 
+    width: 250px; 
+    height: 250px;
+    position: relative; 
+    left: 50%;
+
 }
