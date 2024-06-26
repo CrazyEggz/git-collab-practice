@@ -62,7 +62,7 @@ const checkCollision = () => {
         // Your event code here
         myCongrats.innerHTML = `<p>Wow... Now that's good arrow key skills!!</p><br>
         <p>You should work for NASA.. 😅 </p>
-        <img src="https://banner2.cleanpng.com/20180509/clq/kisspng-nasa-insignia-logo-national-advisory-committee-for-5af2da39e26428.9819356315258650179273.jpg" alt="Congratulations" style="width: 60px; height: 50px;"> `;
+        <img src="./assests/nasa.png" alt="Congratulations" style="width: 60px; height: 50px;"> `;
         myCongrats.style.display = "block";
     } else {
         // Emoji is not inside the target box
