@@ -1,27 +1,39 @@
-// Ken changes
-// 1. Added a function to get the current date and time
-// 2. Added a function to display the current date and time
-// 3. Added a function to display the current date and time every second
+const myBox = document.getElementById("myBox");
 
+const moveAmount = 10;
+let x = 0;
+let y = 0;
 
-// Get the current date and time
-function getCurrentDateTime() {
-    return new Date();
-}
+document.addEventListener("keydown", event => {
+    if (event.key.startsWith("Arrow")) {
+        event.preventDefault();
+        switch (event.key) {
+            case "ArrowUp":
+                y -= moveAmount;
+                break;
+            case "ArrowDown":
+                y += moveAmount;
+                break;
+            case "ArrowLeft":
+                x -= moveAmount;
+                break;
+            case "ArrowRight":
+                x += moveAmount;
+                break;
+        }
+        myBox.style.top = `${y}px`;
+        myBox.style.left = `${x}px`;
+        myBox.textContent = "😮";
+        myBox.style.backgroundColor = "tomato";
+    }
+});
 
-// Display the current date and time
+document.addEventListener("keyup", event => {
+    myBox.textContent = "😊";
+    myBox.style.backgroundColor = "lightblue";
+});
 
-function displayCurrentDateTime() { 
-    const currentDateTime = getCurrentDateTime();
-    const currentDateTimeString = currentDateTime.toLocaleString();
-    const currentDateTimeElement = document.getElementById("current-date-time");
-    currentDateTimeElement.innerHTML = currentDateTimeString;
-} // ive change this to display the current date and time
-
-// Display the current date and time every second
-function displayCurrentDateTimeEverySecond() {
-    setInterval(displayCurrentDateTime, 1000);
-}
-
-displayCurrentDateTimeEverySecond();
-
+document.addEventListener("click", event => {
+    myBox.textContent = "😄";
+    myBox.style.backgroundColor = "lightblue";
+});
